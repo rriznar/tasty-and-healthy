@@ -10,7 +10,10 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item" style="margin-right:30px;">
-                    <router-link class= "link" to="/">Novosti</router-link>
+                    <router-link class= "link" to="/">Naslovnica</router-link>
+                  </li>
+                  <li class="nav-item" style="margin-right:30px;">
+                    <router-link class= "link" to="/Novosti">Novosti</router-link>
                   </li>
                   <li class="nav-item" style="margin-right:30px;">
                     <router-link class= "link" to="/Ponude">Ponude</router-link>
@@ -31,7 +34,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style scoped>
 
 .link{
   color: black;

@@ -1,5 +1,69 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <div class="container-fluid">
+      <br>
+      <div class="row">
+        <div class="col-1"></div>
+        <div class="col-lg-10">
+      </div>  
+      
+            <div class="col-1"></div>
+      </div>
+    
+
+    <div class="row">
+        <div class="col-1"></div>
+      
+           <div class="col-lg-3" style="padding:0px;"><h4 style="padding:15px 15px 15px 0px;">Naše ponude</h4></div>
+          <div class="col-lg-4"></div>
+           <div class="col-lg-3" style="padding:15px 0px 15px 15px;">
+             <div class="natrag"><router-link style="text-decoration:none; color:black;" to="/">Natrag</router-link></div>
+           </div>
+
+        <div class="col-1"></div>
+      </div>
+
+    <div class="row">
+         <div class="col-1"></div>
+          <div class="col-lg-10" style="height:700px; margin-bottom:20px;">
+                     
+                                  
+          </div>
+          <div class="col-1"></div> 
+    </div>
+    
+    
+    </div>
 </template>
+
+<style scoped>
+
+.col-lg-10{
+ background-color: rgba(233, 233, 233, 0.781);
+  height:200px;
+  box-shadow: 4px 4px 4px rgb(187, 187, 187);
+}
+
+.col-lg-9{
+  margin-top: 30px;
+  
+}
+
+.col-lg-12{
+  background-color: white;
+  height:250px;
+  box-shadow: 4px 4px 4px rgb(187, 187, 187);
+  padding:15px;
+
+}
+
+.natrag{
+  float: right;
+  background-color: rgb(128, 194, 52);
+  width:150px;
+  height:35px;
+  text-align: center;
+  padding:4px;
+  box-shadow: 3px 3px 3px rgb(187, 187, 187);
+}
+
+</style>
