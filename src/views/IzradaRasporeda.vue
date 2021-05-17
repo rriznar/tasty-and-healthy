@@ -5,7 +5,7 @@
         <div class="col-lg-1"></div>
 
         <div class="col-lg-2">
-          <div class="natrag"><router-link style="text-decoration:none; color:black;" to="/">Natrag</router-link></div>
+          <div class="natrag"><router-link style="text-decoration:none; color:black;" to="/"><i class="bi bi-arrow-return-left"></i> Natrag</router-link></div>
         </div>
        
         <div class="col-lg-6">
@@ -57,7 +57,6 @@
   height:35px;
   text-align: center;
   padding:4px;
-  
   box-shadow: 3px 3px 3px rgb(187, 187, 187);
 }
 

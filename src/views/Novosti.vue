@@ -3,7 +3,7 @@
       <br>
       <div class="row">
         <div class="col-1"></div>
-        <div class="col-lg-10">
+        <div class="col-10">
       </div>  
       
             <div class="col-1"></div>
@@ -16,7 +16,7 @@
            <div class="col-lg-3" style="padding:0px;"><h4 style="padding:15px 15px 15px 0px;">Današnje novosti</h4></div>
           <div class="col-lg-4"></div>
            <div class="col-lg-3" style="padding:15px 0px 15px 15px;">
-             <div class="natrag"><router-link style="text-decoration:none; color:black;" to="/">Natrag</router-link></div>
+             <div class="natrag"><router-link style="text-decoration:none; color:black;" to="/"><i class="bi bi-arrow-return-left"></i> Natrag</router-link></div>
            </div>
 
         <div class="col-1"></div>
