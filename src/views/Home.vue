@@ -26,14 +26,14 @@
         <div class="row">
               <div class="novost">
                 <div class="datum">15. svibnja 2021.godine</div>
-                  <div class="col-lg-12" style="background-color: white; height:250px; padding:15px; box-shadow: 4px 4px 4px rgb(187, 187, 187);">ssss</div>
+                  <div class="col-lg-12" style="background-color: white; height:250px; padding:15px; box-shadow: 4px 4px 4px rgb(187, 187, 187);">Tekst</div>
               </div>
         </div>
 
          <div class="row">
               <div class="novost">
                 <div class="datum">5. svibnja 2021.godine</div>
-                  <div class="col-lg-12" style="background-color: white; height:250px; padding:15px; box-shadow: 4px 4px 4px rgb(187, 187, 187);">ssss</div>
+                  <div class="col-lg-12" style="background-color: white; height:250px; padding:15px; box-shadow: 4px 4px 4px rgb(187, 187, 187);">Tekst</div>
               </div>
         </div>
         
@@ -59,7 +59,7 @@
         <div class="col-lg-11" style="background-color: rgb(128, 194, 52); margin-top:20px; height:50px; box-shadow: 4px 4px 4px rgb(187, 187, 187);"><h6 style="padding:15px; text-align:center;">Tko smo mi</h6></div>
         <div class="col-lg-11" style="background-color: white; box-shadow: 4px 4px 4px rgb(187, 187, 187); height:250px;">
           <!--  <div class="naslov">Tko smo mi</div>-->
-        <p style="padding:10px;">SS</p>
+        <p style="padding:10px;">Tekst</p>
         </div>
         </div>
 
@@ -67,7 +67,7 @@
         <div class="col-lg-11" style="background-color: rgb(128, 194, 52); margin-top:20px; height:50px; box-shadow: 4px 4px 4px rgb(187, 187, 187);" ><h6 style="padding:15px; text-align:center;">Što nudimo</h6></div>
         <div class="col-lg-11" style="background-color: white; box-shadow: 4px 4px 4px rgb(187, 187, 187); height:250px;">
          <!-- <div class="naslov">Sto nudimo</div> -->
-        <p style="padding:10px;">SS</p>
+        <p style="padding:10px;">Tekst</p>
         </div>
         </div>
 

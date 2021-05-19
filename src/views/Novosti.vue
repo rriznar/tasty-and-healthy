@@ -29,14 +29,14 @@
                       <div class="row justify-content-center">
                           <div class="col-lg-9">
                             <div class="datum">15. svibnja 2021.godine</div>
-                              <div class="col-lg-12">ssss</div>
+                              <div class="col-lg-12">Tekst</div>
                           </div>
                      </div>
 
                 <div class="row justify-content-center">
                       <div class="col-lg-9">
                         <div class="datum">5. svibnja 2021.godine</div>
-                          <div class="col-lg-12">ssss</div>
+                          <div class="col-lg-12">Tekst</div>
                       </div>
                 </div>
 

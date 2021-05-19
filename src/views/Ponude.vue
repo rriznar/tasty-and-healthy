@@ -57,54 +57,55 @@
                   </tr>
                  
                   <tr>
-                    <td>Doručak <p style="border-top: 3px solid #dddddd;">sss</p></td>
-                    <td>Doručak <p style="border-top: 3px solid #dddddd;">sss</p></td>
-                    <td>Doručak <p style="border-top: 3px solid #dddddd;">sss</p></td>
-                    <td>Doručak <p style="border-top: 3px solid #dddddd;">sss</p></td>
-                    <td>Doručak <p style="border-top: 3px solid #dddddd;">sss</p></td>
-                    <td>Doručak <p style="border-top: 3px solid #dddddd;">sss</p></td>
-                    <td>Doručak <p style="border-top: 3px solid #dddddd;">sss</p></td>
+                    <td>Doručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
+                    <td>Doručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
+                    <td>Doručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
+                    <td>Doručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
+                    <td>Doručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
+                    <td>Doručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
+                    <td>Doručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
                  
                   </tr>
 
                   <tr>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">sss</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">sss</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">sss</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">sss</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">sss</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">sss</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">sss</p></td>
+                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
+                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
+                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
+                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
+                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
+                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
+                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
                   </tr>
 
                   <tr>
-                    <td>Ručak <p style="border-top: 3px solid #dddddd;">sss</p></td>
-                    <td>Ručak <p style="border-top: 3px solid #dddddd;">sss</p></td>
-                    <td>Ručak <p style="border-top: 3px solid #dddddd;">sss</p></td>
-                    <td>Ručak <p style="border-top: 3px solid #dddddd;">sss</p></td>
-                    <td>Ručak <p style="border-top: 3px solid #dddddd;">sss</p></td>
-                    <td>Ručak <p style="border-top: 3px solid #dddddd;">sss</p></td>
-                    <td>Ručak <p style="border-top: 3px solid #dddddd;">sss</p></td>
+                    <td>Ručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
+                    <td>Ručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
+                    <td>Ručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
+                    <td>Ručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
+                    <td>Ručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
+                    <td>Ručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
+                    <td>Ručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
+                    
                   </tr>
 
                    <tr>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">sss</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">sss</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">sss</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">sss</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">sss</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">sss</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">sss</p></td>
+                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
+                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
+                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
+                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
+                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
+                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
+                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
                   </tr>
 
                   <tr>
-                    <td>Večera <p style="border-top: 3px solid #dddddd;">sss</p></td>
-                    <td>Večera <p style="border-top: 3px solid #dddddd;">sss</p></td>
-                    <td>Večera <p style="border-top: 3px solid #dddddd;">sss</p></td>
-                    <td>Večera <p style="border-top: 3px solid #dddddd;">sss</p></td>
-                    <td>Večera <p style="border-top: 3px solid #dddddd;">sss</p></td>
-                    <td>Večera <p style="border-top: 3px solid #dddddd;">sss</p></td>
-                    <td>Večera <p style="border-top: 3px solid #dddddd;">sss</p></td>
+                    <td>Večera <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
+                    <td>Večera <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
+                    <td>Večera <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
+                    <td>Večera <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
+                    <td>Večera <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
+                    <td>Večera <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
+                    <td>Večera <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
                   </tr>
                 </table>
                  <div class="col-lg-1" style="margin:auto; margin-bottom:10px;">
