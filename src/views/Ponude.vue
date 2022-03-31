@@ -32,8 +32,8 @@
           
           
           </div>
-           <div class="col-lg-2" style="padding:15px 0px 15px 15px;">
-             <div class="natrag"><router-link style="text-decoration:none; color:black;" to="/"><i class="bi bi-arrow-return-left"></i> Natrag</router-link></div>
+           <div class="col-lg-2" style="padding:15px 0px 15px 15px; text-align:right;">
+             <button type="button" class="btn btn-info"><router-link style="text-decoration:none; color:black;" to="/Pocetna"><i class="bi bi-arrow-return-left"></i> Natrag</router-link></button>
            </div>
 
         <div class="col-1"></div>
@@ -41,7 +41,7 @@
 
     <div class="row">
          <div class="col-1"></div>
-          <div class="col-lg-10" style="height:700px; margin-bottom:20px; overflow: scroll;">
+          <div class="col-lg-10" style="height:700px; margin-bottom:20px; overflow: auto;">
           <br>
           <div class="row">
                <div class="table-responsive">
@@ -219,6 +219,21 @@ td, th {
   width:100px;
 }
 
+.btn:hover {
+  background-color: rgb(113, 172, 46);
+}
+
+.btn-info{
+ 
+  background-color: rgb(128, 194, 52);
+  border-color:rgb(128, 194, 52);
+  width:150px;
+  text-align: center;
+  padding:5px;
+  
+  
+}
+
 .col-lg-10{
  background-color: rgba(233, 233, 233, 0.781);
   height:200px;
@@ -238,14 +253,6 @@ td, th {
 
 }
 
-.natrag{
-  float: right;
-  background-color: rgb(128, 194, 52);
-  width:150px;
-  height:35px;
-  text-align: center;
-  padding:4px;
-  box-shadow: 3px 3px 3px rgb(187, 187, 187);
-}
+
 
 </style>

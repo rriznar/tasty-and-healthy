@@ -1,47 +1,65 @@
 <template>
+
   <div id="app">
-    <div id="nav">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-               <a class="navbar-brand" href="#"><router-link class= "link" to="/">Tasty And Healthy</router-link></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item" style="margin-right:30px;">
-                    <router-link class= "link" to="/">Naslovnica</router-link>
-                  </li>
-                  <li class="nav-item" style="margin-right:30px;">
-                    <router-link class= "link" to="/Novosti">Novosti</router-link>
-                  </li>
-                  <li class="nav-item" style="margin-right:30px;">
-                    <router-link class= "link" to="/Ponude">Ponude</router-link>
-                  </li>
-                  <li class="nav-item">
-                    <router-link class= "link" to="/IzradaRasporeda">Izrada Rasporeda</router-link>
-                  </li>
-                  
-                </ul>
-              </div>
+    <nav id="nav" class="navbar navbar-expand-lg navbar-light ">
+        
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="@/assets/logo_tah.jpg" alt="" width="45" height="32" class="d-inline-block align-text-top">
+              Tasty And Healthy
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul v-if='auth.authenticated' class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li v-if='auth.authenticated' class="nav-item"> <router-link class= "nav-link" to="/Pocetna">Naslovnica</router-link> </li>
+              <li v-if='auth.authenticated' class="nav-item"> <router-link class= "nav-link" to="/Novosti">Novosti</router-link> </li>
+              <li v-if='auth.authenticated' class="nav-item"> <router-link class= "nav-link" to="/Ponude">Ponude</router-link> </li>
+              <li v-if='auth.authenticated' class="nav-item"> <router-link class= "nav-link" to="/IzradaRasporeda">Izrada Rasporeda</router-link> </li>
+              </ul>
+              <ul class="navbar-nav mb-2 mb-lg-0 ml-auto">
+              <span v-if='auth.authenticated' class="btn btn-link my-2 my-sm-0 mr-2"><a style="color:rgb(128, 194, 52);" @click="logout()" href="#">Odjavite se </a></span>
+              <span v-if='auth.authenticated' class="nav-link">Korisnik: {{auth.userEmail}}</span>
+              </ul>
             </div>
-          </nav>
-      
-     </div>
+          </div>
+        </nav>
     <div class="col-12"></div>
 
     <router-view/>
   </div>
 </template>
+<script>
 
-<style scoped>
+import { Auth } from '@/services'
 
-.link{
+export default ({
+  data() {
+    return {
+    auth: Auth.state,
+    }    
+  },
+  methods:{
+    logout(){
+      Auth.logout();
+      this.$router.go();
+    },
+  }
+})
+</script>
+
+
+
+<style>
+
+.nav-link{
   color: black;
   text-decoration: none;
-    }
+  margin-right:10px;
+  }
  
-.link:hover{
+.nav-link:hover{
   color:rgb(128, 194, 52);
 }
 
@@ -49,7 +67,6 @@
    padding:30px;
    background-color: rgb(128, 194, 52);
  }
-
 
 
 </style>

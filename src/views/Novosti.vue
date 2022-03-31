@@ -15,8 +15,8 @@
       
            <div class="col-lg-3" style="padding:0px;"><h4 style="padding:15px 15px 15px 0px;">Današnje novosti</h4></div>
           <div class="col-lg-4"></div>
-           <div class="col-lg-3" style="padding:15px 0px 15px 15px;">
-             <div class="natrag"><router-link style="text-decoration:none; color:black;" to="/"><i class="bi bi-arrow-return-left"></i> Natrag</router-link></div>
+           <div class="col-lg-3" style="padding:15px 0px 15px 15px; text-align:right;">
+              <button type="button" class="btn btn-info"><router-link style="text-decoration:none; color:black;" to="/Pocetna"><i class="bi bi-arrow-return-left"></i> Natrag</router-link></button>
            </div>
 
         <div class="col-1"></div>
@@ -50,6 +50,28 @@
 </template>
 
 <style scoped>
+.btn{
+  background-color:rgb(128, 194, 52);
+  border-color: rgb(128, 194, 52);
+  color:black;
+  width:100px;
+}
+
+.btn:hover {
+  background-color: rgb(113, 172, 46);
+}
+
+.btn-info{
+ 
+  background-color: rgb(128, 194, 52);
+  border-color:rgb(128, 194, 52);
+  width:150px;
+  text-align: center;
+  padding:5px;
+  
+  
+}
+
 
 .col-lg-10{
  background-color: rgba(233, 233, 233, 0.781);
