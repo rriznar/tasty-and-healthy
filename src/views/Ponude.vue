@@ -17,15 +17,19 @@
           <div class="col-lg-6">
             <p style="padding:20px 15px 0px 0px; font-size:15px;">Upišite svoju visinu i težinu za izračun tjelesne mase</p>
                 <div class="form-floating mb-3">
-                  <input type="number" class="form-control" id="floatingInput" placeholder="0">
+                  <input v-model="visina" type="number" class="form-control" id="floatingInput" placeholder="0">
                   <label for="floatingInput">Visina</label>
                 </div>
            
                  <div class="form-floating mb-3">
-                  <input type="number" class="form-control" id="floatingInput" placeholder="0">
+                  <input v-model="tezina" type="number" class="form-control" id="floatingInput" placeholder="0">
                   <label for="floatingInput">Težina</label>
                 <div class="col-lg-1" style="margin-top:10px;">
-                <button type="submit" class="btn btn-outline-success"><i class="bi bi-search"></i> Pretraži</button>
+                <button type="submit" class="btn btn-outline-success" @click="dohvatiPodatke()">Izračunaj</button>
+                
+                <p style="margin-top:20px;">Vaš BMI:</p>
+                <div type="text" class="form-control" style="min-width:150px; height:50px; padding:12px;">{{recentBMI}}</div>
+                
                 </div>
                 </div>
 
@@ -43,150 +47,22 @@
          <div class="col-1"></div>
           <div class="col-lg-10" style="height:700px; margin-bottom:20px; overflow: auto;">
           <br>
-          <div class="row">
-               <div class="table-responsive">
-                <table class="table">
-                  <tr>
-                   <th>Ponedjeljak</th>
-                   <th>Utorak</th>
-                   <th>Srijeda</th>
-                   <th>Četvrtak</th>
-                   <th>Petak</th>
-                   <th>Subota</th>   
-                   <th>Nedjelja</th>
-                  </tr>
-                 
-                  <tr>
-                    <td>Doručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Doručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Doručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Doručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Doručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Doručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Doručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                 
-                  </tr>
-
-                  <tr>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                  </tr>
-
-                  <tr>
-                    <td>Ručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Ručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Ručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Ručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Ručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Ručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Ručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    
-                  </tr>
-
-                   <tr>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                  </tr>
-
-                  <tr>
-                    <td>Večera <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Večera <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Večera <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Večera <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Večera <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Večera <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Večera <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                  </tr>
-                </table>
-                 <div class="col-lg-1" style="margin:auto; margin-bottom:10px;">
-                <button type="submit" class="btn btn-outline-success">Preuzmi <i class="bi bi-download"></i></button>
-                </div>
-          </div>
-          </div>
 
           <div class="row">
-               <div class="table-responsive">
-                <table class="table">
-                  <tr>
-                   <th>Ponedjeljak</th>
-                   <th>Utorak</th>
-                   <th>Srijeda</th>
-                   <th>Četvrtak</th>
-                   <th>Petak</th>
-                   <th>Subota</th>   
-                   <th>Nedjelja</th>
-                  </tr>
-                 
-                  <tr>
-                    <td>Doručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Doručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Doručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Doručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Doručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Doručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Doručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                 
-                  </tr>
-
-                  <tr>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                  </tr>
-
-                  <tr>
-                    <td>Ručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Ručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Ručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Ručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Ručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Ručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Ručak <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    
-                  </tr>
-
-                   <tr>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Obrok <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                  </tr>
-
-                  <tr>
-                    <td>Večera <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Večera <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Večera <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Večera <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Večera <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Večera <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                    <td>Večera <p style="border-top: 3px solid #dddddd;">Tekst</p></td>
-                  </tr>
-                </table>
-                  <div class="col-lg-1" style="margin:auto; margin-bottom:10px;">
-                <button type="submit" class="btn btn-outline-success">Preuzmi <i class="bi bi-download"></i></button>
-                </div>
-          </div>
+          <p>BMI od 25 do 28</p>  
+          <raspored />
           </div>
 
+           <div class="row">
+            <p>BMI od 28 do 32</p> 
+            <raspored />
+            </div>
 
-                                  
+           <div class="row">
+             <p>BMI od 32 do 40</p> 
+          <raspored />
+          </div>
+                                            
           </div>
           <div class="col-1"></div> 
     </div>
@@ -195,22 +71,58 @@
     </div>
 </template>
 
+<script>
+import Raspored from '@/components/Raspored.vue';
+import {data} from '@/services';
+
+export default{
+  components:{
+    Raspored,
+    },
+ data(){
+   return{
+     visina: "",
+     tezina: "",
+     final: "",
+     svi_BMI: [],
+     recentBMI: "",
+   }
+ },
+  methods: {
+     async dohvatiPodatke(){
+       let dodaj_BMI = {
+        visina: this.visina,
+        tezina: this.tezina,
+        
+       }
+       let kvadriraj = dodaj_BMI.visina*dodaj_BMI.visina;
+       
+       let final_BMI = {
+          final: (dodaj_BMI.tezina/kvadriraj)*10000
+       }
+       
+       console.log(final_BMI);
+       data.dodaj_BMI(final_BMI);
+
+        this.svi_BMI = await data.dohvati_BMI();
+        
+        let last = this.svi_BMI.length;
+        console.log("Objave su tu: ",this.svi_BMI[last-1].final);
+
+        console.log(this.svi_BMI.length)
+        this.recentBMI = this.svi_BMI[last-1].final;
+     }    
+   },
+   async created(){
+        
+    }
+
+}
+
+</script>
+
+
 <style scoped>
-
-
-th{
-  background-color:rgb(128, 194, 52);
-  text-align: center;
-  width:500px;
-}
-
-td{
-  background-color: white;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  }
 
 .btn{
   background-color:rgb(128, 194, 52);
@@ -230,8 +142,6 @@ td, th {
   width:150px;
   text-align: center;
   padding:5px;
-  
-  
 }
 
 .col-lg-10{

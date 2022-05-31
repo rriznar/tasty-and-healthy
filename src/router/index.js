@@ -44,6 +44,12 @@ const routes = [
     name: 'Prijava',
     component: Home,
     component: () => import('../views/Prijava.vue')
+  },
+  {
+    path: '/Korisnik',
+    name: 'Korisnik',
+    component: Home,
+    component: () => import('../views/Korisnik.vue')
   }
 
 ]

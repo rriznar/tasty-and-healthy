@@ -4,7 +4,7 @@
     <nav id="nav" class="navbar navbar-expand-lg navbar-light ">
         
           <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand">
               <img src="@/assets/logo_tah.jpg" alt="" width="45" height="32" class="d-inline-block align-text-top">
               Tasty And Healthy
             </a>
@@ -20,7 +20,7 @@
               </ul>
               <ul class="navbar-nav mb-2 mb-lg-0 ml-auto">
               <span v-if='auth.authenticated' class="btn btn-link my-2 my-sm-0 mr-2"><a style="color:rgb(128, 194, 52);" @click="logout()" href="#">Odjavite se </a></span>
-              <span v-if='auth.authenticated' class="nav-link">Korisnik: {{auth.userEmail}}</span>
+              <span v-if='auth.authenticated'><router-link class= "nav-link" to="/Korisnik">Korisnik: {{auth.userEmail}}</router-link></span>
               </ul>
             </div>
           </div>

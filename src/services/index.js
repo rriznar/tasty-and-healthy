@@ -22,6 +22,19 @@ Service.interceptors.response.use((response)=> response, (error)=>{
     }
 });
 
+let Posts = {
+    async getOne(id){
+        let response = await Service.get(`/posts/${id}`);
+        let doc = response.data;
+        return {
+            id: doc._id,
+            naslov: doc.title,
+            datum: doc.date,
+            tekst:doc.text
+        }
+    }
+}
+
 let Auth = {
     async login(username,password){
         let response = await Service.post("/auth",{
@@ -84,4 +97,45 @@ let Auth = {
 
 };
 
-export { Service,Auth }
+let data = {
+    dodaj_BMI(final_BMI)
+    {
+        return Service.post('/BMI', final_BMI);
+    },
+
+    async dohvati_BMI()
+    {
+        let response = await Service.get(`/BMI`);
+        console.log(response);
+        let data = response.data;
+        
+        data=data.map((doc)=>{
+        return {
+            id: doc._id,
+            final: doc.final
+        }    
+        });
+        console.log("Podaci data: ",data);
+        return data;
+    },
+
+    async dohvati_raspored()
+    {
+        let response = await Service.get(`/raspored`);
+        console.log(response);
+        let data = response.data;
+        
+        data=data.map((doc)=>{
+        return {
+            id: doc._id,
+            broj_kalorija: doc.broj_kalorija,
+            jelo: doc.jelo,
+            tip_obroka: doc.tip_obroka
+        }    
+        });
+        console.log("Podaci data: ",data);
+        return data;
+    }
+}
+
+export { Service,Auth,Posts, data }
