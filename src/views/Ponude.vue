@@ -49,20 +49,9 @@
           <br>
 
           <div class="row">
-          <p>BMI od 25 do 28</p>  
-          <raspored />
-          </div>
-
-           <div class="row">
-            <p>BMI od 28 do 32</p> 
-            <raspored />
-            </div>
-
-           <div class="row">
-             <p>BMI od 32 do 40</p> 
-          <raspored />
-          </div>
-                                            
+          
+          <raspored v-for="raspored in raspored" :key="raspored.id" :raspored="raspored"/>
+          </div>  
           </div>
           <div class="col-1"></div> 
     </div>
@@ -86,6 +75,47 @@ export default{
      final: "",
      svi_BMI: [],
      recentBMI: "",
+     raspored:[
+      {bmi_1 : "bmi_1"},
+      {bmi_2 : "bmi_2"},
+      {kal : "kal"},
+      {pon_d : "pon_d"},
+       {uto_d : "uto_d"},
+       {sri_d : "sri_d"},
+       {cet_d : "cet_d"},
+       {pet_d : "pet_d"},
+       {sub_d : "sub_d"},
+       {ned_d : "ned_d"},
+       {pon_o1 : "pon_o1"},
+       {uto_o1 : "uto_o1"},
+       {sri_o1 : "sri_o1"},
+       {cet_o1 : "cet_o1"},
+       {pet_o1 : "pet_o1"},
+       {sub_o1 : "sub_o1"},
+       {ned_o1 : "ned_o1"},
+       {pon_r : "pon_r"},
+       {uto_r : "uto_r"},
+       {sri_r : "sri_r"},
+       {cet_r : "cet_r"},
+       {pet_r : "pet_r"},
+       {sub_r : "sub_r"},
+       {ned_r : "ned_r"},
+       {pon_o2 : "pon_o2"},
+       {uto_o2 : "uto_o2"},
+       {sri_o2 : "sri_o2"},
+       {cet_o2 : "cet_o2"},
+       {pet_o2 : "pet_o2"},
+       {sub_o2 : "sub_o2"},
+       {ned_o2 : "ned_o2"},
+       {pon_v : "pon_v"},
+       {uto_v : "uto_v"},
+       {sri_v : "sri_v"},
+       {cet_v : "cet_v"},
+       {pet_v : "pet_v"},
+       {sub_v : "sub_v"},
+       {ned_v : "ned_v"}
+     ]
+     
    }
  },
   methods: {
@@ -100,7 +130,7 @@ export default{
        let final_BMI = {
           final: (dodaj_BMI.tezina/kvadriraj)*10000
        }
-       
+      
        console.log(final_BMI);
        data.dodaj_BMI(final_BMI);
 
@@ -113,9 +143,12 @@ export default{
         this.recentBMI = this.svi_BMI[last-1].final;
      }    
    },
-   async created(){
-        
-    }
+  async created(){
+    this.raspored = await data.dohvati_raspored_BMI();
+  
+    console.log(this.raspored);
+
+}
 
 }
 

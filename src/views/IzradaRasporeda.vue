@@ -5,7 +5,7 @@
         <div class="col-lg-1"></div>
 
         <div class="col-lg-2">
-          <button type="button" class="btn btn-info"><router-link style="text-decoration:none; color:black;" to="/Pocetna"><i class="bi bi-arrow-return-left"></i> Natrag</router-link></button>
+         <button type="button" class="btn btn-info"><router-link style="text-decoration:none; color:black;" to="/Pocetna"><i class="bi bi-arrow-return-left"></i> Natrag</router-link></button>
         </div>
        
         <div class="col-lg-6">
@@ -39,60 +39,67 @@
                   <tr>
                     <td v-for="(jelo) in dohvat_dorucak.slice(0,7)" :key=jelo.id> <p>Doručak </p>
                     <div >
-                      <select class="form-select" aria-label="Default select example">
-                        <option selected>Izaberite jelo</option>
-                        <option v-on:option="zbroji(jelo.broj_kalorija)">{{jelo.jelo}}</option>
-                        <!--<option value="2">{{jelo.broj_kalorija}}</option>-->
+                      <select class="form-select" aria-label="Default select example" @change="getSum(jelo)">
+                        <option hidden>Izaberite jelo</option>
+                        <option  v-bind:value="jelo.id">{{jelo.jelo}}</option>
+                        <option  v-bind:value="jelo.id">{{jelo.jelo2}}</option>
                         
-                        <option value="3">Three</option>
+                
+
                       </select>
+                      
                       </div>
                       </td>
                  
                   </tr>
 
                   <tr>
-                    <td v-for="(jelo) in dohvat_dorucak.slice(8,15)" :key=jelo.id>Obrok <p style="border-top: 3px solid #dddddd;">
-                      <select class="form-select" aria-label="Default select example">
-                        <option selected>Izaberite jelo</option>
-                        <option value="1" @click="zbroji(jelo.broj_kalorija)" >{{jelo.jelo}}</option>
-                        <!--<option value="2">{{jelo.broj_kalorija}}</option>-->
-                        <option value="3">Three</option>
+                    <td v-for="(jelo) in dohvat_dorucak.slice(8,15)" :key=jelo.id><p>Obrok</p>
+                      <select class="form-select" aria-label="Default select example" @change="getSum(jelo)">
+                        <option hidden>Izaberite jelo</option>
+               
+                        <option v-bind:value="jelo.id">{{jelo.jelo}}</option>
+                        <option  v-bind:value="jelo.id">{{jelo.jelo2}}</option>
+                        
                       </select>
-                      </p></td>
+                      
+                     </td>
                   </tr>
 
                   <tr>
-                    <td v-for="(jelo) in dohvat_dorucak.slice(16,23)" :key=jelo.id>Ručak <p style="border-top: 3px solid #dddddd;">
-                      <select class="form-select" aria-label="Default select example">
-                        <option selected>Izaberite jelo</option>
-                        <option value="1" @click="zbroji(jelo.broj_kalorija)">{{jelo.jelo}}</option>
-                        <!--<option value="2">{{jelo.broj_kalorija}}</option>-->
-                        <option value="3">Three</option>
+                    <td v-for="(jelo) in dohvat_dorucak.slice(16,23)" :key=jelo.id><p>Ručak</p>
+                      <select class="form-select" aria-label="Default select example" @change="getSum(jelo)">
+                        <option hidden>Izaberite jelo</option>
+                        <option v-bind:value="jelo.id" >{{jelo.jelo}}</option>
+                        <option  v-bind:value="jelo.id">{{jelo.jelo2}}</option>
+             
+                       
                       </select>
-                      </p></td>
+                     </td>
                   </tr>
 
                   <tr>
-                   <td v-for="(jelo) in dohvat_dorucak.slice(24,31)" :key=jelo.id>Obrok <p style="border-top: 3px solid #dddddd;">
-                      <select class="form-select" aria-label="Default select example">
-                        <option selected>Izaberite jelo</option>
-                        <option value="1" @click="zbroji(jelo.broj_kalorija)">{{jelo.jelo}}</option>
-                        <!--<option value="2">{{jelo.broj_kalorija}}</option>-->
-                        <option value="3">Three</option>
+                   <td v-for="(jelo) in dohvat_dorucak.slice(24,31)" :key=jelo.id><p>Obrok</p> 
+                      <select class="form-select" aria-label="Default select example" @change="getSum(jelo)">
+                        <option hidden>Izaberite jelo</option>
+                        <option v-bind:value="jelo.id" >{{jelo.jelo}}</option>
+                        <option  v-bind:value="jelo.id">{{jelo.jelo2}}</option>
+               
+                    
                       </select>
-                      </p></td>
+                     </td>
                   </tr>
 
                   <tr>
-                   <td v-for="(jelo) in dohvat_dorucak.slice(32,39)" :key=jelo.id>Večera <p style="border-top: 3px solid #dddddd;">
-                      <select class="form-select" aria-label="Default select example">
-                        <option selected>Izaberite jelo</option>
-                        <option value="1" @click="zbroji(jelo.broj_kalorija)">{{jelo.jelo}}</option>
-                        <!--<option value="2">{{jelo.broj_kalorija}}</option>-->
-                        <option value="3">Three</option>
+                   <td v-for="(jelo) in dohvat_dorucak.slice(32,39)" :key=jelo.id><p>Večera</p> 
+                      <select class="form-select" aria-label="Default select example"  @change="getSum(jelo)">
+                        <option hidden>Izaberite jelo</option>
+                           <option v-bind:value="jelo.id" >{{jelo.jelo}}</option>
+                           <option  v-bind:value="jelo.id">{{jelo.jelo2}}</option>
+                  
+                       
                       </select>
-                      </p></td>
+                     </td>
                   </tr>
                 </div>
                 </table>
@@ -102,7 +109,7 @@
       <div class="row">
         <div class="col-lg-4"></div>
       <div class="col-lg-4">
-        <p style="text-align:center;">Ukupno kalorija za vas tjedni raspored {{trenutne_kalorije}}</p>
+        <p style="text-align:center;">Ukupno kalorija za vas tjedni raspored: <br> {{sum}} kalorija</p>
       </div>
       <div class="col-lg-4"></div>
       </div>
@@ -128,31 +135,41 @@ export default{
    return{
      dohvat_dorucak:[],
      dohvat_rucak:[],
+     selected: [],
      dorucak:"dorucak",
      rucak:"rucak",
      obrok:"obrok",
      vecera: "vecera",
-     suma_kalorija:0 ,
      trenutne_kalorije:0,
      kalorije:{
        kalorije_dorucak:0,
        kalorije_rucak:0,
      },
+     pomocni:0,
    }
  },
+ computed: {
+    sum() {
+      return this.selected.reduce((acc, curr) => acc + curr.broj_kalorija, 0)
+    }
+  },
  methods: {
-   zbroji(pomocne_kalorije){
+   async zbroji(pomocne_kalorije){
      console.log("ulazak u funkciju")
      
      this.suma_kalorija = this.suma_kalorija + pomocne_kalorije;
      console.log("Suma kalorija: ",pomocne_kalorije, this.suma_kalorija) 
-   }
+   },
+   getSum(cal) {
+      const idx = this.selected.findIndex(s => s.id === this.dohvat_dorucak.id)
+      idx > -1 ? this.selected.splice(idx, 1) : this.selected.push(cal)
+    }
  },
  async created(){
    this.dohvat_dorucak = await data.dohvati_raspored();
    this.dohvat_rucak = await data.dohvati_raspored();
    console.log(this.zbroji)
-   console.log(this.dohvat_dorucak)
+   console.log("Dohvat dorucak: ",this.dohvat_dorucak) 
  }
 
 

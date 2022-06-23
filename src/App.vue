@@ -14,13 +14,12 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul v-if='auth.authenticated' class="navbar-nav me-auto mb-2 mb-lg-0">
               <li v-if='auth.authenticated' class="nav-item"> <router-link class= "nav-link" to="/Pocetna">Naslovnica</router-link> </li>
-              <li v-if='auth.authenticated' class="nav-item"> <router-link class= "nav-link" to="/Novosti">Novosti</router-link> </li>
               <li v-if='auth.authenticated' class="nav-item"> <router-link class= "nav-link" to="/Ponude">Ponude</router-link> </li>
               <li v-if='auth.authenticated' class="nav-item"> <router-link class= "nav-link" to="/IzradaRasporeda">Izrada Rasporeda</router-link> </li>
               </ul>
               <ul class="navbar-nav mb-2 mb-lg-0 ml-auto">
               <span v-if='auth.authenticated' class="btn btn-link my-2 my-sm-0 mr-2"><a style="color:rgb(128, 194, 52);" @click="logout()" href="#">Odjavite se </a></span>
-              <span v-if='auth.authenticated'><router-link class= "nav-link" to="/Korisnik">Korisnik: {{auth.userEmail}}</router-link></span>
+              <span class= "nav-link" v-if='auth.authenticated'>Korisnik: {{auth.userEmail}}</span>
               </ul>
             </div>
           </div>

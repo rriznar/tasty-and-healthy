@@ -26,12 +26,8 @@
                 <div class="col-lg-1"></div>
                 <div class="col-lg-10">
                 <br>  
-                <objava />
-                <objava />
-                <objava />
-                <objava />
-                <objava />
-                
+                <objava v-for="post in post" :key="post.id" :info="post"/>
+                              
                 
                 
               </div>
@@ -66,11 +62,9 @@
 
           </div>
       </div>   
-         
-         
-         
-         
+          
          </div> 
+
       </div>
     
 
@@ -82,6 +76,7 @@
 <script>
 import Objava from '@/components/Objava.vue';
 import Onama from '@/components/Onama.vue';
+import {data} from '@/services';
 
 export default{
   components:{
@@ -89,8 +84,23 @@ export default{
     Onama
     },
  data(){
-   return{}
- },
+        return{
+            post:
+            [
+            {naslov:"naslov"},
+            {datum:"datum"},
+            {slika:"slika"},
+            {tekst:"tekst"}
+            ]
+        }
+    },
+    
+async created(){
+    this.post = await data.dohvati_postove();
+  
+    console.log(this.naslov);
+
+}
 
 
 }
