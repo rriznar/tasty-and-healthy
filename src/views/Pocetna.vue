@@ -55,9 +55,23 @@
 
       <div class="col-lg-12" style="margin-bottom:20px; min-height:670px; background-color:rgba(233, 233, 233, 0.781); box-shadow: 4px 4px 4px rgb(187, 187, 187); margin-left:5px;">
         <br>
-        <onama />
+  
+          <div class="card border-secondary mb-3" style="max-width: 18rem;">
+          <div class="card-header">Tko smo mi</div>
+          <div class="card-body text-secondary">
+            <p class="card-text" style="text-align: justify;">Mi smo grupa nutricionista i fitnes trenera koji smo odlučili stvoriti aplikaciju kako bi pomogli ostalim ljudima koji se muče sa viškom kila.</p>
+          </div>
+        </div>
 
-        <onama />
+          <div class="card border-secondary mb-3" style="max-width: 18rem;">
+          <div class="card-header">Što nudimo</div>
+          <div class="card-body text-secondary">
+              <p class="card-text"> - portal sa korisnim informacijama u vezi mršavljenja </p>
+              <p class="card-text"> - pregled naših planova prehrane prema indeksu tjelesne mase </p>
+              <p class="card-text">- izradu svog vlastitog plana prehrane.</p>
+          </div>
+        </div>
+
               
 
           </div>
@@ -75,13 +89,14 @@
 
 <script>
 import Objava from '@/components/Objava.vue';
-import Onama from '@/components/Onama.vue';
 import {data} from '@/services';
+
+
 
 export default{
   components:{
     Objava,
-    Onama
+    
     },
  data(){
         return{
@@ -91,7 +106,8 @@ export default{
             {datum:"datum"},
             {slika:"slika"},
             {tekst:"tekst"}
-            ]
+            ],
+
         }
     },
     
@@ -136,6 +152,20 @@ body {
   height:200px;
   box-shadow: 4px 4px 4px rgb(187, 187, 187);
 }
+
+.card{
+    padding:0px;
+    border: none;
+}
+
+.card-header{
+    background-color: rgb(128, 194, 52);
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
 
 
 
